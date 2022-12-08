@@ -47,7 +47,9 @@ app.post("/up-vote-suggestion", async (req, res) => {
   res.json({ votes })
 })
 
-app.listen(process.env.PORT)
+app.listen(process.env.PORT, () => {
+  console.log(`Server running on port ${process.env.PORT}`)
+})
 
 // require('dotenv').config()
 // const express = require("express")
